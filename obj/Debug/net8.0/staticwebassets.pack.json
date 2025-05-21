@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\KanbanChatApp.z6phc8p5ku.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KanbanChatApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KanbanChatApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.KanbanChatApp.props",
+      "PackagePath": "build\\KanbanChatApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.KanbanChatApp.props",
+      "PackagePath": "buildMultiTargeting\\KanbanChatApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.KanbanChatApp.props",
+      "PackagePath": "buildTransitive\\KanbanChatApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

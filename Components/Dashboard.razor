@@ -1,0 +1,76 @@
+﻿@page "/dashboard"
+@using KanbanChatApp.Data
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@rendermode InteractiveServer
+@inject ApplicationDbContext Db
+
+<h3 class="mb-4">Project Dashboard</h3>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Create New Project</h5>
+    </div>
+    <div class="card-body">
+        <EditForm Model="newProject" OnValidSubmit="CreateProject" FormName="CreateProjectForm">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <InputText @bind-Value="newProject.Name" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <InputText @bind-Value="newProject.Description" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success">Create Project</button>
+        </EditForm>
+    </div>
+</div>
+
+@if (projects == null || !projects.Any())
+{
+    <div class="alert alert-warning">No projects found.</div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach (var project in projects)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Name</h5>
+                        <p class="card-text">@project.Description</p>
+                        <a href="/projectdetails/@project.Id" class="btn btn-outline-primary">View Tasks</a>
+                        <a href="/chat/@project.Id" class="btn btn-outline-secondary ms-2">Chat</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<Project> projects = new();
+    private Project newProject = new();
+
+    protected override void OnInitialized()
+    {
+        LoadProjects();
+    }
+
+    private void LoadProjects()
+    {
+        projects = Db.Projects.ToList();
+    }
+
+    private void CreateProject()
+    {
+        Db.Projects.Add(newProject);
+        Db.SaveChanges();
+        newProject = new(); // reset form
+        LoadProjects();
+    }
+}
