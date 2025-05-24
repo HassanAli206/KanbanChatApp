@@ -44,7 +44,6 @@ else
                         <h5 class="card-title">@project.Name</h5>
                         <p class="card-text">@project.Description</p>
                         <a href="/projectdetails/@project.Id" class="btn btn-outline-primary">View Tasks</a>
-                        <a href="/chat/@project.Id" class="btn btn-outline-secondary ms-2">Chat</a>
                     </div>
                 </div>
             </div>
@@ -66,11 +65,12 @@ else
         projects = Db.Projects.ToList();
     }
 
-    private void CreateProject()
+    private async Task CreateProject()
     {
         Db.Projects.Add(newProject);
-        Db.SaveChanges();
-        newProject = new(); // reset form
+        await Db.SaveChangesAsync();
+        newProject = new(); // Reset form
         LoadProjects();
+        StateHasChanged();
     }
 }
