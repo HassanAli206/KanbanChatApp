@@ -1,7 +1,46 @@
 ﻿@page "/"
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager Navigation
 
-<PageTitle>Home</PageTitle>
+<AuthorizeView>
+    <Authorized>
+        <div class="container mt-5">
+            <h2>Welcome back, @context.User.Identity?.Name 👋</h2>
+            <p class="lead">Here’s what you can do:</p>
 
-<h1>Hello, world!</h1>
+            <ul class="list-group mb-4">
+                <li class="list-group-item"><a href="/dashboard">📁 View Projects</a></li>
+                <li class="list-group-item"><a href="/jschat/1">💬 Join Project Chat</a></li>
+                @if (context.User.IsInRole("Admin"))
+                {
+                    <li class="list-group-item"><a href="/admin/roles">🔐 Manage Roles</a></li>
+                }
+            </ul>
 
-Welcome to your new app.
+            <a class="btn btn-danger" href="/Account/Logout">Logout</a>
+        </div>
+    </Authorized>
+
+    <NotAuthorized>
+        <div class="container text-center mt-5">
+            <h1 class="display-4">Welcome to TeamSync 🎯</h1>
+            <p class="lead">Collaborate with your team. Organize tasks. Chat in real-time.</p>
+
+            <div class="mt-4">
+                <img src="/images/kanban-demo.png" class="img-fluid" style="max-height: 300px;" alt="Kanban Demo" />
+            </div>
+
+            <ul class="list-group list-group-flush mt-4">
+                <li class="list-group-item">🗂️ Create and manage projects</li>
+                <li class="list-group-item">✅ Assign and track tasks</li>
+                <li class="list-group-item">💬 Chat with team members instantly</li>
+                <li class="list-group-item">🔐 Secure, role-based access</li>
+            </ul>
+
+            <div class="mt-4">
+                <a href="/Account/Login" class="btn btn-primary me-2">Login</a>
+                <a href="/Account/Register" class="btn btn-outline-secondary">Register</a>
+            </div>
+        </div>
+    </NotAuthorized>
+</AuthorizeView>

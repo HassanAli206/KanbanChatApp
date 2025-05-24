@@ -85,5 +85,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "KanbanChatApp.Controllers.ChatApiController",
+    "Method": "GetMessages",
+    "RelativePath": "api/ChatApi/{projectId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

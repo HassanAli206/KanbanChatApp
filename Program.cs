@@ -34,6 +34,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddControllers();
+
 
 builder.Services.AddIdentityCore<ApplicationUser>(options =>
     options.SignIn.RequireConfirmedAccount = true)
@@ -115,6 +117,8 @@ app.UseAuthentication();
 app.UseAuthorization();      
 app.UseAntiforgery();        
 app.MapHub<ChatHub>("/chathub");
+app.MapControllers();
+
 
 
 app.MapRazorComponents<App>()

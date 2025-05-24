@@ -12,29 +12,29 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Y3QRrYDjsQ\u002BBj4noKNSCcSRxgRtgAn0QL1o5m5BNepk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2154"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Y3QRrYDjsQ\u002BBj4noKNSCcSRxgRtgAn0QL1o5m5BNepk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 22:25:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/KanbanChatApp/css/chat.c44anxr4xy.css">
+    <StaticWebAssetEndpoint Include="_content/KanbanChatApp/css/chat.1h4o7idehe.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\chat.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c44anxr4xy"},{"Name":"integrity","Value":"sha256-XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q\u002B//tcWwIo="},{"Name":"label","Value":"_content/KanbanChatApp/css/chat.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"696"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q\u002B//tcWwIo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 10:29:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1h4o7idehe"},{"Name":"integrity","Value":"sha256-pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw="},{"Name":"label","Value":"_content/KanbanChatApp/css/chat.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"744"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 13:04:42 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KanbanChatApp/css/chat.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\chat.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q\u002B//tcWwIo="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"696"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q\u002B//tcWwIo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 10:29:54 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/KanbanChatApp/js/chat.1ohtrfwleq.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chat.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1ohtrfwleq"},{"Name":"integrity","Value":"sha256-TyrUD2\u002Bm83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI="},{"Name":"label","Value":"_content/KanbanChatApp/js/chat.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1438"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022TyrUD2\u002Bm83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 10:29:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"744"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 13:04:42 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KanbanChatApp/js/chat.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chat.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TyrUD2\u002Bm83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1438"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022TyrUD2\u002Bm83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 10:29:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2187"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 13:01:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/KanbanChatApp/js/chat.l0scu25spu.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chat.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l0scu25spu"},{"Name":"integrity","Value":"sha256-K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY="},{"Name":"label","Value":"_content/KanbanChatApp/js/chat.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2187"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 13:01:15 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/KanbanChatApp/js/signalr/signalr.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\signalr\signalr.js'))</AssetFile>

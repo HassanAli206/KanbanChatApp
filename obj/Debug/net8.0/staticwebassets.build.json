@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oI06i2o1BHb+NjrmzZixajZrDFmGCJ3QSmI/G+fVFLU=",
+  "Hash": "yiRuIH+OVrOmj8iorwG40SIri/hbAwtfz2OopGfQAKQ=",
   "Source": "KanbanChatApp",
   "BasePath": "_content/KanbanChatApp",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c44anxr4xy",
-      "Integrity": "XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo=",
+      "Fingerprint": "1h4o7idehe",
+      "Integrity": "pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\chat.css"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1ohtrfwleq",
-      "Integrity": "TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=",
+      "Fingerprint": "l0scu25spu",
+      "Integrity": "K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
@@ -454,7 +454,7 @@
       ]
     },
     {
-      "Route": "css/chat.c44anxr4xy.css",
+      "Route": "css/chat.1h4o7idehe.css",
       "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -464,7 +464,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "696"
+          "Value": "744"
         },
         {
           "Name": "Content-Type",
@@ -472,11 +472,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo=\""
+          "Value": "\"pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+          "Value": "Sat, 24 May 2025 13:04:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -486,7 +486,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c44anxr4xy"
+          "Value": "1h4o7idehe"
         },
         {
           "Name": "label",
@@ -494,7 +494,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo="
+          "Value": "sha256-pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw="
         }
       ]
     },
@@ -509,7 +509,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "696"
+          "Value": "744"
         },
         {
           "Name": "Content-Type",
@@ -517,11 +517,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo=\""
+          "Value": "\"pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+          "Value": "Sat, 24 May 2025 13:04:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -531,52 +531,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo="
-        }
-      ]
-    },
-    {
-      "Route": "js/chat.1ohtrfwleq.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1438"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 10:29:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1ohtrfwleq"
-        },
-        {
-          "Name": "label",
-          "Value": "js/chat.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI="
+          "Value": "sha256-pWu4wqQOF5MgsMeMo3nZbRSk04JFh3rMgIR2jAc/lYw="
         }
       ]
     },
@@ -591,7 +546,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1438"
+          "Value": "2187"
         },
         {
           "Name": "Content-Type",
@@ -599,11 +554,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=\""
+          "Value": "\"K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+          "Value": "Sat, 24 May 2025 13:01:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -613,7 +568,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI="
+          "Value": "sha256-K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.l0scu25spu.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2187"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 13:01:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l0scu25spu"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chat.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY="
         }
       ]
     },

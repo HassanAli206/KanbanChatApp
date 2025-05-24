@@ -24,16 +24,21 @@
     background: #e9ecef;
 }
 
-    .chat-message.me {
-        background: #d1e7dd;
-        text-align: right;
-    }
+.chat-message.me {
+    background: #d1e7dd;
+    text-align: right;
+}
 
 .chat-input {
     display: flex;
     gap: 10px;
 }
 
-    .chat-input input {
-        flex: 1;
-    }
+.chat-input input {
+    flex: 1;
+}
+
+.chat-message small {
+    font-size: 0.75rem;
+    margin-left: 8px;
+}
