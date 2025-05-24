@@ -1,1 +1,5 @@
 wwwroot\app.css
+wwwroot\css\chat.css
+wwwroot\js\chat.js
+wwwroot\js\signalr\signalr.js
+wwwroot\js\signalr\signalr.min.js

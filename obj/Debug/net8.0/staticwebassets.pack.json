@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\app.css"
     },
     {
+      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "PackagePath": "staticwebassets\\css\\chat.css"
+    },
+    {
+      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat.js"
+    },
+    {
+      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\signalr.js"
+    },
+    {
+      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\signalr.min.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KanbanChatApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

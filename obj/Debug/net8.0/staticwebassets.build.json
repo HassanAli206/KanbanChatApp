@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sl8qWSYcbmBh2Lq0FnGoS7KocKx1TNWnH0IxEZ2qMWY=",
+  "Hash": "oI06i2o1BHb+NjrmzZixajZrDFmGCJ3QSmI/G+fVFLU=",
   "Source": "KanbanChatApp",
   "BasePath": "_content/KanbanChatApp",
   "Mode": "Default",
@@ -120,6 +120,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "SourceId": "KanbanChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "BasePath": "_content/KanbanChatApp",
+      "RelativePath": "css/chat#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c44anxr4xy",
+      "Integrity": "XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\chat.css"
+    },
+    {
+      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "SourceId": "KanbanChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "BasePath": "_content/KanbanChatApp",
+      "RelativePath": "js/chat#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1ohtrfwleq",
+      "Integrity": "TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chat.js"
+    },
+    {
+      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "SourceId": "KanbanChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "BasePath": "_content/KanbanChatApp",
+      "RelativePath": "js/signalr/signalr#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ow5ttbm12p",
+      "Integrity": "2FNf94l36ZTTr47aUHNf8jjFc0VPBO9KZ3ocCfWTuEw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\signalr.js"
+    },
+    {
+      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "SourceId": "KanbanChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "BasePath": "_content/KanbanChatApp",
+      "RelativePath": "js/signalr/signalr.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4if2422s7n",
+      "Integrity": "BFnCKoY/yObcyMb3+3Hl8id/z7Trj2CdSoIIkfM7uuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\signalr.min.js"
     }
   ],
   "Endpoints": [
@@ -370,6 +454,334 @@
       ]
     },
     {
+      "Route": "css/chat.c44anxr4xy.css",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c44anxr4xy"
+        },
+        {
+          "Name": "label",
+          "Value": "css/chat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo="
+        }
+      ]
+    },
+    {
+      "Route": "css/chat.css",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XH5MWwzXJwtD3bHVh7T5aiMjAxF1BEku1q+//tcWwIo="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.1ohtrfwleq.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1438"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1ohtrfwleq"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chat.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1438"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 10:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TyrUD2+m83m1QDJj37WWf0wk0wSlvV2ooZyKAJ22JoI="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr/signalr.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2FNf94l36ZTTr47aUHNf8jjFc0VPBO9KZ3ocCfWTuEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 09:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2FNf94l36ZTTr47aUHNf8jjFc0VPBO9KZ3ocCfWTuEw="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr/signalr.min.4if2422s7n.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53574"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BFnCKoY/yObcyMb3+3Hl8id/z7Trj2CdSoIIkfM7uuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 09:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4if2422s7n"
+        },
+        {
+          "Name": "label",
+          "Value": "js/signalr/signalr.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BFnCKoY/yObcyMb3+3Hl8id/z7Trj2CdSoIIkfM7uuo="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr/signalr.min.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53574"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BFnCKoY/yObcyMb3+3Hl8id/z7Trj2CdSoIIkfM7uuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 09:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BFnCKoY/yObcyMb3+3Hl8id/z7Trj2CdSoIIkfM7uuo="
+        }
+      ]
+    },
+    {
+      "Route": "js/signalr/signalr.ow5ttbm12p.js",
+      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2FNf94l36ZTTr47aUHNf8jjFc0VPBO9KZ3ocCfWTuEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 09:22:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow5ttbm12p"
+        },
+        {
+          "Name": "label",
+          "Value": "js/signalr/signalr.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2FNf94l36ZTTr47aUHNf8jjFc0VPBO9KZ3ocCfWTuEw="
+        }
+      ]
+    },
+    {
       "Route": "KanbanChatApp.bundle.scp.css",
       "AssetFile": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
       "Selectors": [],
@@ -392,7 +804,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 22:44:47 GMT"
+          "Value": "Sat, 24 May 2025 09:51:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -429,7 +841,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 22:44:47 GMT"
+          "Value": "Sat, 24 May 2025 09:51:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -466,7 +878,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 22:44:47 GMT"
+          "Value": "Sat, 24 May 2025 09:51:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -511,7 +923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 22:44:47 GMT"
+          "Value": "Sat, 24 May 2025 09:51:41 GMT"
         },
         {
           "Name": "Cache-Control",
