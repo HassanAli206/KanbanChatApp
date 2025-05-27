@@ -1,5 +1,7 @@
 wwwroot\app.css
 wwwroot\css\chat.css
+wwwroot\images\kaban-demo.jpeg
+wwwroot\images\teamsync-preview.jpg
 wwwroot\js\chat.js
 wwwroot\js\signalr\signalr.js
 wwwroot\js\signalr\signalr.min.js

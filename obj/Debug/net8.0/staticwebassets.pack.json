@@ -1,27 +1,35 @@
 {
   "Files": [
     {
-      "Id": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
       "PackagePath": "staticwebassets\\KanbanChatApp.z6phc8p5ku.bundle.scp.css"
     },
     {
-      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\app.css",
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\css\\chat.css",
       "PackagePath": "staticwebassets\\css\\chat.css"
     },
     {
-      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\kaban-demo.jpeg",
+      "PackagePath": "staticwebassets\\images\\kaban-demo.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\teamsync-preview.jpg",
+      "PackagePath": "staticwebassets\\images\\teamsync-preview.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\chat.js",
       "PackagePath": "staticwebassets\\js\\chat.js"
     },
     {
-      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
       "PackagePath": "staticwebassets\\js\\signalr\\signalr.js"
     },
     {
-      "Id": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "Id": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
       "PackagePath": "staticwebassets\\js\\signalr\\signalr.min.js"
     },
     {

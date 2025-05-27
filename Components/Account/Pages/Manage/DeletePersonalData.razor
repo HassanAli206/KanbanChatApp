@@ -12,30 +12,59 @@
 
 <PageTitle>Delete Personal Data</PageTitle>
 
-<StatusMessage Message="@message" />
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<h3>Delete Personal Data</h3>
+    .card, .form-control, .form-select, .btn {
+        border-radius: 10px;
+    }
 
-<div class="alert alert-warning" role="alert">
-    <p>
-        <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
-    </p>
-</div>
+    .card {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: white;
+    }
 
-<div>
-    <EditForm Model="Input" FormName="delete-user" OnValidSubmit="OnValidSubmitAsync" method="post">
-        <DataAnnotationsValidator />
-        <ValidationSummary class="text-danger" role="alert" />
-        @if (requirePassword)
-        {
-            <div class="form-floating mb-3">
-                <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Please enter your password." />
-                <label for="password" class="form-label">Password</label>
-                <ValidationMessage For="() => Input.Password" class="text-danger" />
+    h3 {
+        color: white;
+    }
+</style>
+
+<div class="container py-5">
+    <h3 class="mb-4">Delete Personal Data</h3>
+
+    <StatusMessage Message="@message" />
+
+    <div class="alert alert-warning" role="alert">
+        <p>
+            <strong>Warning:</strong> Deleting your account will permanently remove all your data. This action cannot be undone.
+        </p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <EditForm Model="Input" FormName="delete-user" OnValidSubmit="OnValidSubmitAsync" method="post">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="text-danger" role="alert" />
+
+                    @if (requirePassword)
+                    {
+                        <div class="form-floating mb-3">
+                            <InputText id="password" type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" placeholder="Password" />
+                            <label for="password">Password</label>
+                            <ValidationMessage For="() => Input.Password" class="text-danger" />
+                        </div>
+                    }
+
+                    <button class="btn btn-danger w-100" type="submit">Delete Data and Close My Account</button>
+                </EditForm>
             </div>
-        }
-        <button class="w-100 btn btn-lg btn-danger" type="submit">Delete data and close my account</button>
-    </EditForm>
+        </div>
+    </div>
 </div>
 
 @code {

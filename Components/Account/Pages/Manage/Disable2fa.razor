@@ -10,24 +10,53 @@
 
 <PageTitle>Disable two-factor authentication (2FA)</PageTitle>
 
-<StatusMessage />
-<h3>Disable two-factor authentication (2FA)</h3>
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<div class="alert alert-warning" role="alert">
-    <p>
-        <strong>This action only disables 2FA.</strong>
-    </p>
-    <p>
-        Disabling 2FA does not change the keys used in authenticator apps. If you wish to change the key
-        used in an authenticator app you should <a href="Account/Manage/ResetAuthenticator">reset your authenticator keys.</a>
-    </p>
-</div>
+    .card, .btn {
+        border-radius: 10px;
+    }
 
-<div>
-    <form @formname="disable-2fa" @onsubmit="OnSubmitAsync" method="post">
-        <AntiforgeryToken />
-        <button class="btn btn-danger" type="submit">Disable 2FA</button>
-    </form>
+    .card {
+        background-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        color: white;
+    }
+</style>
+
+<div class="container py-5">
+    <h3 class="mb-4">Disable Two-Factor Authentication (2FA)</h3>
+
+    <StatusMessage />
+
+    <div class="alert alert-warning" role="alert">
+        <p>
+            <strong>This action only disables 2FA.</strong>
+        </p>
+        <p>
+            Disabling 2FA does not change the keys used in authenticator apps. If you wish to change the key
+            used in an authenticator app you should
+            <a href="/Account/Manage/ResetAuthenticator" class="text-decoration-underline">reset your authenticator keys</a>.
+        </p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <form @formname="disable-2fa" @onsubmit="OnSubmitAsync" method="post">
+                    <AntiforgeryToken />
+                    <button class="btn btn-danger w-100" type="submit">Disable 2FA</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 @code {
@@ -56,9 +85,10 @@
 
         var userId = await UserManager.GetUserIdAsync(user);
         Logger.LogInformation("User with ID '{UserId}' has disabled 2fa.", userId);
+
         RedirectManager.RedirectToWithStatus(
             "Account/Manage/TwoFactorAuthentication",
-            "2fa has been disabled. You can reenable 2fa when you setup an authenticator app",
+            "2FA has been disabled. You can reenable it when setting up an authenticator app.",
             HttpContext);
     }
 }

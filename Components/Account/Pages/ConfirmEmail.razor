@@ -10,8 +10,43 @@
 
 <PageTitle>Confirm email</PageTitle>
 
-<h1>Confirm email</h1>
-<StatusMessage Message="@statusMessage" />
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .confirm-container {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 3rem;
+        max-width: 700px;
+        margin: 6rem auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+        text-align: center;
+    }
+
+    .confirm-title {
+        color: #5a30d0;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .confirm-message {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+</style>
+
+<div class="confirm-container">
+    <div class="confirm-title">Email Confirmation</div>
+    <hr />
+    <div class="confirm-message">
+        <StatusMessage Message="@statusMessage" />
+    </div>
+</div>
 
 @code {
     private string? statusMessage;

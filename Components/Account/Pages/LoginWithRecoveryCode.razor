@@ -1,36 +1,55 @@
 ﻿@page "/Account/LoginWithRecoveryCode"
 
-@using System.ComponentModel.DataAnnotations
-@using Microsoft.AspNetCore.Identity
-@using KanbanChatApp.Data
-
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
-@inject IdentityRedirectManager RedirectManager
-@inject ILogger<LoginWithRecoveryCode> Logger
-
 <PageTitle>Recovery code verification</PageTitle>
 
-<h1>Recovery code verification</h1>
-<hr />
-<StatusMessage Message="@message" />
-<p>
-    You have requested to log in with a recovery code. This login will not be remembered until you provide
-    an authenticator app code at log in or disable 2FA and log in again.
-</p>
-<div class="row">
-    <div class="col-md-4">
-        <EditForm Model="Input" FormName="login-with-recovery-code" OnValidSubmit="OnValidSubmitAsync" method="post">
-            <DataAnnotationsValidator />
-            <ValidationSummary class="text-danger" role="alert" />
-            <div class="form-floating mb-3">
-                <InputText @bind-Value="Input.RecoveryCode" class="form-control" autocomplete="off" placeholder="RecoveryCode" />
-                <label for="recovery-code" class="form-label">Recovery Code</label>
-                <ValidationMessage For="() => Input.RecoveryCode" class="text-danger" />
-            </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-        </EditForm>
-    </div>
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .recovery-container {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 3rem;
+        max-width: 600px;
+        margin: 6rem auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .recovery-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .recovery-subtitle {
+        font-size: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+</style>
+
+<div class="recovery-container">
+    <div class="recovery-title">Recovery code verification</div>
+    <StatusMessage Message="@message" />
+    <p class="recovery-subtitle">
+        You have requested to log in with a recovery code. This login will not be remembered until you provide
+        an authenticator app code at log in or disable 2FA and log in again.
+    </p>
+
+    <EditForm Model="Input" FormName="login-with-recovery-code" OnValidSubmit="OnValidSubmitAsync" method="post">
+        <DataAnnotationsValidator />
+        <ValidationSummary class="text-danger" role="alert" />
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="Input.RecoveryCode" class="form-control" autocomplete="off" placeholder="RecoveryCode" />
+            <label for="recovery-code" class="form-label">Recovery Code</label>
+            <ValidationMessage For="() => Input.RecoveryCode" class="text-danger" />
+        </div>
+        <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+    </EditForm>
 </div>
 
 @code {
@@ -45,7 +64,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Ensure the user has gone through the username & password screen first
         user = await SignInManager.GetTwoFactorAuthenticationUserAsync() ??
             throw new InvalidOperationException("Unable to load two-factor authentication user.");
     }
@@ -53,9 +71,7 @@
     private async Task OnValidSubmitAsync()
     {
         var recoveryCode = Input.RecoveryCode.Replace(" ", string.Empty);
-
         var result = await SignInManager.TwoFactorRecoveryCodeSignInAsync(recoveryCode);
-
         var userId = await UserManager.GetUserIdAsync(user);
 
         if (result.Succeeded)

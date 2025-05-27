@@ -11,130 +11,154 @@
 @attribute [Authorize]
 @rendermode InteractiveServer
 
-<div class="row">
-    <div class="col-12">
-        <h3 class="mb-3">Project Details</h3>
+<PageTitle>Project Details</PageTitle>
 
-        @if (project == null)
-        {
-            <div class="alert alert-info" role="alert">
-                <em>Loading...</em>
-            </div>
-        }
-        else
-        {
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">@project.Name</h4>
-                    <p class="card-text">@project.Description</p>
-                </div>
-            </div>
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-            @if (isAdmin)
+    .card, .table, .form-control, .form-select, .btn {
+        border-radius: 10px;
+    }
+
+    .card {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .table {
+        background-color: white;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-4 text-white">Project Details</h3>
+
+            @if (project == null)
             {
-                <h5 class="mb-3">Add Task</h5>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <EditForm Model="newTask" OnValidSubmit="AddTask" FormName="AddTaskForm">
-                            <DataAnnotationsValidator />
-                            <ValidationSummary class="text-danger" />
-
-                            <div class="mb-3">
-                                <label for="taskTitle" class="form-label">Title</label>
-                                <InputText id="taskTitle" @bind-Value="newTask.Title" class="form-control" placeholder="Enter task title" />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="taskStatus" class="form-label">Status</label>
-                                <InputSelect id="taskStatus" @bind-Value="newTask.Status" class="form-select">
-                                    <option value="To-Do">To-Do</option>
-                                    <option value="In Progress">In Progress</option>
-                                    <option value="Done">Done</option>
-                                </InputSelect>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="assignedUser" class="form-label">Assign to</label>
-                                <select id="assignedUser" class="form-select" @bind="newTask.AssignedUserId">
-                                    <option value="">-- Unassigned --</option>
-                                    @foreach (var user in users)
-                                    {
-                                        <option value="@user.Id">@user.UserName</option>
-                                    }
-                                </select>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Add Task</button>
-                        </EditForm>
-                    </div>
-                </div>
-            }
-
-            <h5 class="mb-3">Tasks</h5>
-
-            @if (project.Tasks == null || !project.Tasks.Any())
-            {
-                <div class="alert alert-warning" role="alert">
-                    No tasks found.
+                <div class="alert alert-info" role="alert">
+                    <em>Loading...</em>
                 </div>
             }
             else
             {
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Title</th>
-                                <th>Status</th>
-                                <th>Assigned To</th>
-                                @if (!isAdmin)
-                                {
-                                    <th>Update Status</th>
-                                }
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var task in project.Tasks)
-                            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">@project.Name</h4>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+
+                @if (isAdmin)
+                {
+                    <h5 class="mb-3 text-white">Add Task</h5>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <EditForm Model="newTask" OnValidSubmit="AddTask" FormName="AddTaskForm">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary class="text-danger" />
+
+                                <div class="mb-3">
+                                    <label for="taskTitle" class="form-label">Title</label>
+                                    <InputText id="taskTitle" @bind-Value="newTask.Title" class="form-control" placeholder="Enter task title" />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="taskStatus" class="form-label">Status</label>
+                                    <InputSelect id="taskStatus" @bind-Value="newTask.Status" class="form-select">
+                                        <option value="To-Do">To-Do</option>
+                                        <option value="In Progress">In Progress</option>
+                                        <option value="Done">Done</option>
+                                    </InputSelect>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="assignedUser" class="form-label">Assign to</label>
+                                    <select id="assignedUser" class="form-select" @bind="newTask.AssignedUserId">
+                                        <option value="">-- Unassigned --</option>
+                                        @foreach (var user in users)
+                                        {
+                                            <option value="@user.Id">@user.UserName</option>
+                                        }
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Add Task</button>
+                            </EditForm>
+                        </div>
+                    </div>
+                }
+
+                <h5 class="mb-3 text-white">Tasks</h5>
+
+                @if (project.Tasks == null || !project.Tasks.Any())
+                {
+                    <div class="alert alert-warning" role="alert">
+                        No tasks found.
+                    </div>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead class="table-dark">
                                 <tr>
-                                    <td>@task.Title</td>
-                                    <td>
-                                        <span class="badge @(task.Status switch {
-                                            "To-Do" => "bg-secondary",
-                                            "In Progress" => "bg-warning text-dark",
-                                            "Done" => "bg-success",
-                                            _ => "bg-light"
-                                        })">
-                                            @task.Status
-                                        </span>
-                                    </td>
-                                    <td>
-                                        @if (task.AssignedUser != null)
-                                        {
-                                            <span class="text-primary fw-semibold">@task.AssignedUser.UserName</span>
-                                        }
-                                        else
-                                        {
-                                            <span class="text-muted">Unassigned</span>
-                                        }
-                                    </td>
+                                    <th>Title</th>
+                                    <th>Status</th>
+                                    <th>Assigned To</th>
                                     @if (!isAdmin)
                                     {
-                                        <td>
-                                            <InputSelect @bind-Value="task.Status" class="form-select" @onchange="@(() => UpdateTaskStatus(task))">
-                                                <option value="To-Do">To-Do</option>
-                                                <option value="In Progress">In Progress</option>
-                                                <option value="Done">Done</option>
-                                            </InputSelect>
-                                        </td>
+                                        <th>Update Status</th>
                                     }
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                            </thead>
+                            <tbody>
+                                @foreach (var task in project.Tasks)
+                                {
+                                    <tr>
+                                        <td>@task.Title</td>
+                                        <td>
+                                            <span class="badge @(task.Status switch {
+                                                "To-Do" => "bg-secondary",
+                                                "In Progress" => "bg-warning text-dark",
+                                                "Done" => "bg-success",
+                                                _ => "bg-light"
+                                            })">
+                                                @task.Status
+                                            </span>
+                                        </td>
+                                        <td>
+                                            @if (task.AssignedUser != null)
+                                            {
+                                                <span class="text-primary fw-semibold">@task.AssignedUser.UserName</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">Unassigned</span>
+                                            }
+                                        </td>
+                                        @if (!isAdmin)
+                                        {
+                                            <td>
+                                                <InputSelect @bind-Value="task.Status" class="form-select" @onchange="@(() => UpdateTaskStatus(task))">
+                                                    <option value="To-Do">To-Do</option>
+                                                    <option value="In Progress">In Progress</option>
+                                                    <option value="Done">Done</option>
+                                                </InputSelect>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
             }
-        }
+        </div>
     </div>
 </div>
 
@@ -173,10 +197,10 @@
             .FirstOrDefault(p => p.Id == ProjectId);
 
         newTask = new TaskItem
-            {
-                ProjectId = ProjectId,
-                Status = "To-Do"
-            };
+        {
+            ProjectId = ProjectId,
+            Status = "To-Do"
+        };
     }
 
     private async Task AddTask()

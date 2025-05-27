@@ -4,6 +4,30 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject NavigationManager Navigation
 
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .logout-container {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 3rem;
+        max-width: 600px;
+        margin: 6rem auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+</style>
+
+<div class="logout-container">
+    Signing you out...
+</div>
+
 @code {
     protected override async Task OnInitializedAsync()
     {

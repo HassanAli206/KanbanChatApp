@@ -2,7 +2,37 @@
 
 <PageTitle>Locked out</PageTitle>
 
-<header>
-    <h1 class="text-danger">Locked out</h1>
-    <p class="text-danger">This account has been locked out, please try again later.</p>
-</header>
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .lockout-container {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 3rem;
+        max-width: 600px;
+        margin: 6rem auto;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .lockout-title {
+        color: #d03030;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .lockout-message {
+        color: #d03030;
+        font-size: 1.25rem;
+    }
+</style>
+
+<div class="lockout-container">
+    <div class="lockout-title">Locked out</div>
+    <p class="lockout-message">This account has been locked out, please try again later.</p>
+</div>

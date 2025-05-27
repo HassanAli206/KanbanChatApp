@@ -3,6 +3,54 @@
     [Parameter] public int projectId { get; set; }
 }
 
+<PageTitle>Project Chat Room</PageTitle>
+
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .chat-container {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 2rem;
+        max-width: 800px;
+        margin: 6rem auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-box {
+        height: 300px;
+        overflow-y: auto;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .chat-input {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .chat-input input[type="text"] {
+        padding: 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .chat-input button {
+        padding: 0.75rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
+</style>
+
 <div class="chat-container mt-5">
     <h3 class="mb-4 text-center">Project Chat Room</h3>
 

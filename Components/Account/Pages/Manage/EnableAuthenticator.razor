@@ -13,58 +13,83 @@
 @inject IdentityRedirectManager RedirectManager
 @inject ILogger<EnableAuthenticator> Logger
 
-<PageTitle>Configure authenticator app</PageTitle>
+@rendermode InteractiveServer
 
-@if (recoveryCodes is not null)
-{
-    <ShowRecoveryCodes RecoveryCodes="recoveryCodes.ToArray()" StatusMessage="@message" />
-}
-else
-{
-    <StatusMessage Message="@message" />
-    <h3>Configure authenticator app</h3>
-    <div>
-        <p>To use an authenticator app go through the following steps:</p>
-        <ol class="list">
-            <li>
-                <p>
-                    Download a two-factor authenticator app like Microsoft Authenticator for
-                    <a href="https://go.microsoft.com/fwlink/?Linkid=825072">Android</a> and
-                    <a href="https://go.microsoft.com/fwlink/?Linkid=825073">iOS</a> or
-                    Google Authenticator for
-                    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en">Android</a> and
-                    <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iOS</a>.
-                </p>
-            </li>
-            <li>
-                <p>Scan the QR Code or enter this key <kbd>@sharedKey</kbd> into your two factor authenticator app. Spaces and casing do not matter.</p>
-                <div class="alert alert-info">Learn how to <a href="https://go.microsoft.com/fwlink/?Linkid=852423">enable QR code generation</a>.</div>
-                <div></div>
-                <div data-url="@authenticatorUri"></div>
-            </li>
-            <li>
-                <p>
-                    Once you have scanned the QR code or input the key above, your two factor authentication app will provide you
-                    with a unique code. Enter the code in the confirmation box below.
-                </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <EditForm Model="Input" FormName="send-code" OnValidSubmit="OnValidSubmitAsync" method="post">
-                            <DataAnnotationsValidator />
-                            <div class="form-floating mb-3">
-                                <InputText @bind-Value="Input.Code" class="form-control" autocomplete="off" placeholder="Please enter the code." />
-                                <label for="code" class="control-label form-label">Verification Code</label>
-                                <ValidationMessage For="() => Input.Code" class="text-danger" />
+<PageTitle>Configure Authenticator App</PageTitle>
+
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card, .form-control, .btn {
+        border-radius: 10px;
+    }
+
+    .card {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: white;
+    }
+
+    h3, h5, label, p, ol {
+        color: white;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            @if (recoveryCodes is not null)
+            {
+                <ShowRecoveryCodes RecoveryCodes="recoveryCodes.ToArray()" StatusMessage="@message" />
+            }
+            else
+            {
+                <div class="card p-4 mb-4">
+                    <StatusMessage Message="@message" />
+                    <h3 class="mb-3">Configure Authenticator App</h3>
+                    <p>To use an authenticator app, follow these steps:</p>
+                    <ol>
+                        <li>
+                            <p>
+                                Download a two-factor authenticator app like Microsoft Authenticator for
+                                <a href="https://go.microsoft.com/fwlink/?Linkid=825072" target="_blank">Android</a> and
+                                <a href="https://go.microsoft.com/fwlink/?Linkid=825073" target="_blank">iOS</a>, or
+                                Google Authenticator for
+                                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en" target="_blank">Android</a> and
+                                <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" target="_blank">iOS</a>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Scan the QR Code or enter this key <kbd>@sharedKey</kbd> into your two-factor authenticator app. Spaces and casing do not matter.</p>
+                            <div class="alert alert-info">
+                                Learn how to <a href="https://go.microsoft.com/fwlink/?Linkid=852423" target="_blank">enable QR code generation</a>.
                             </div>
-                            <button type="submit" class="w-100 btn btn-lg btn-primary">Verify</button>
-                            <ValidationSummary class="text-danger" role="alert" />
-                        </EditForm>
-                    </div>
+                            <div data-url="@authenticatorUri"></div>
+                        </li>
+                        <li>
+                            <p>
+                                Once you have scanned the QR code or input the key above, your authenticator app will provide you with a unique code. Enter the code below.
+                            </p>
+                            <EditForm Model="Input" FormName="send-code" OnValidSubmit="OnValidSubmitAsync" method="post">
+                                <DataAnnotationsValidator />
+                                <div class="form-floating mb-3">
+                                    <InputText @bind-Value="Input.Code" class="form-control" autocomplete="off" placeholder="Please enter the code." />
+                                    <label for="code" class="form-label">Verification Code</label>
+                                    <ValidationMessage For="() => Input.Code" class="text-danger" />
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Verify</button>
+                                <ValidationSummary class="text-danger mt-2" role="alert" />
+                            </EditForm>
+                        </li>
+                    </ol>
                 </div>
-            </li>
-        </ol>
+            }
+        </div>
     </div>
-}
+</div>
 
 @code {
     private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
@@ -84,15 +109,12 @@ else
     protected override async Task OnInitializedAsync()
     {
         user = await UserAccessor.GetRequiredUserAsync(HttpContext);
-
         await LoadSharedKeyAndQrCodeUriAsync(user);
     }
 
     private async Task OnValidSubmitAsync()
     {
-        // Strip spaces and hyphens
         var verificationCode = Input.Code.Replace(" ", string.Empty).Replace("-", string.Empty);
-
         var is2faTokenValid = await UserManager.VerifyTwoFactorTokenAsync(
             user, UserManager.Options.Tokens.AuthenticatorTokenProvider, verificationCode);
 
@@ -120,7 +142,6 @@ else
 
     private async ValueTask LoadSharedKeyAndQrCodeUriAsync(ApplicationUser user)
     {
-        // Load the authenticator key & QR code URI to display on the form
         var unformattedKey = await UserManager.GetAuthenticatorKeyAsync(user);
         if (string.IsNullOrEmpty(unformattedKey))
         {
@@ -129,7 +150,6 @@ else
         }
 
         sharedKey = FormatKey(unformattedKey!);
-
         var email = await UserManager.GetEmailAsync(user);
         authenticatorUri = GenerateQrCodeUri(email!, unformattedKey!);
     }
@@ -147,7 +167,6 @@ else
         {
             result.Append(unformattedKey.AsSpan(currentPosition));
         }
-
         return result.ToString().ToLowerInvariant();
     }
 

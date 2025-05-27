@@ -4,43 +4,214 @@
 
 <AuthorizeView>
     <Authorized>
-        <div class="container mt-5">
-            <h2>Welcome back, @context.User.Identity?.Name 👋</h2>
-            <p class="lead">Here’s what you can do:</p>
+        <div class="main-wrapper dark-mode">
+            <div class="glass-container">
+                <h1 class="glow-title">👋 Welcome, @context.User.Identity?.Name</h1>
+                <p class="subtitle">Your team's synergy starts here.</p>
 
-            <ul class="list-group mb-4">
-                <li class="list-group-item"><a href="/dashboard">📁 View Projects</a></li>
-                <li class="list-group-item"><a href="/jschat/1">💬 Join Project Chat</a></li>
-                @if (context.User.IsInRole("Admin"))
-                {
-                    <li class="list-group-item"><a href="/admin/roles">🔐 Manage Roles</a></li>
-                }
-            </ul>
+                <div class="card-grid">
+                    <div class="card-item">📂 Dashboard Overview</div>
+                    <div class="card-item">💬 Team Chat</div>
+                    @if (context.User.IsInRole("Admin"))
+                    {
+                        <div class="card-item">🛠️ Admin Panel</div>
+                    }
+                </div>
 
-            <a class="btn btn-danger" href="/Account/Logout">Logout</a>
+                <a class="btn neon-red" href="/Account/Logout">🚪 Logout</a>
+            </div>
         </div>
     </Authorized>
 
     <NotAuthorized>
-        <div class="container text-center mt-5">
-            <h1 class="display-4">Welcome to TeamSync 🎯</h1>
-            <p class="lead">Collaborate with your team. Organize tasks. Chat in real-time.</p>
-
-            <div class="mt-4">
-                <img src="/images/kanban-demo.png" class="img-fluid" style="max-height: 300px;" alt="Kanban Demo" />
+        <div class="main-wrapper light-mode">
+            <div class="lite-container">
+                <div class="left-section">
+                    <h1 class="title">Welcome to <span class="highlight">TeamSync Lite</span></h1>
+                    <p class="subtitle">Organize tasks. Chat. Collaborate.</p>
+                    <a class="btn start-btn" href="/Account/Register">Get Started</a>
+                </div>
+                <div class="right-section">
+                    <img src="/images/teamsync-preview.jpg" alt="TeamSync Illustration" class="illustration" />
+                </div>
             </div>
 
-            <ul class="list-group list-group-flush mt-4">
-                <li class="list-group-item">🗂️ Create and manage projects</li>
-                <li class="list-group-item">✅ Assign and track tasks</li>
-                <li class="list-group-item">💬 Chat with team members instantly</li>
-                <li class="list-group-item">🔐 Secure, role-based access</li>
-            </ul>
+            <div class="feature-grid">
+                <div class="feature-card">📁 Create and manage projects</div>
+                <div class="feature-card">✅ Assign and track tasks</div>
+                <div class="feature-card">💬 Chat with team mins instantly</div>
+                <div class="feature-card">🔐 Secure, role-based access</div>
+            </div>
 
-            <div class="mt-4">
-                <a href="/Account/Login" class="btn btn-primary me-2">Login</a>
-                <a href="/Account/Register" class="btn btn-outline-secondary">Register</a>
+            <div class="action-buttons">
+                <a class="btn login-btn" href="/Account/Login">Login</a>
+                <a class="btn register-btn" href="/Account/Register">Register</a>
             </div>
         </div>
     </NotAuthorized>
 </AuthorizeView>
+
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, #e0ecff 0%, #c8d8ff 40%, #b0c4ff 100%);
+        background-attachment: fixed;
+        overflow-x: hidden;
+        color: #1e293b;
+    }
+
+    .main-wrapper.light-mode {
+        position: relative;
+        min-height: 100vh;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-wrapper.light-mode::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .lite-container {
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 2.5rem 3rem;
+        max-width: 960px;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .left-section {
+        flex: 1 1 300px;
+    }
+
+    .right-section {
+        flex: 1 1 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2.75rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #4f46e5, #9333ea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #334155;
+    }
+
+    .btn.start-btn {
+        background: linear-gradient(to right, #4f46e5, #9333ea);
+        color: white;
+        padding: 0.8rem 1.8rem;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+        transition: transform 0.2s ease;
+    }
+
+    .btn.start-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .illustration {
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-grid {
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        max-width: 960px;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        padding: 1rem 1.5rem;
+        border-radius: 18px;
+        font-weight: 600;
+        color: #1e293b;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .action-buttons {
+        z-index: 1;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn.login-btn,
+    .btn.register-btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn.login-btn {
+        background-color: #4f46e5;
+    }
+
+    .btn.register-btn {
+        background-color: #9333ea;
+    }
+
+    .btn:hover {
+        opacity: 0.95;
+        transform: scale(1.03);
+    }
+
+    @@media (max-width: 768px) {
+        .lite-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .right-section {
+            margin-top: 2rem;
+        }
+    }
+</style>

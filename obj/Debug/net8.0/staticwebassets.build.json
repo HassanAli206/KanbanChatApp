@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J6cfDYtdHFGOU05F3GxEv0a14iy/LoBwhWsZIEsHQag=",
+  "Hash": "7aMAW+RyCgY4ArVHyfX0z0CvDGQHAH3yOnv40UfsJ18=",
   "Source": "KanbanChatApp",
   "BasePath": "_content/KanbanChatApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "KanbanChatApp\\wwwroot",
       "Source": "KanbanChatApp",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
       "BasePath": "_content/KanbanChatApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "Hh7BRmiYuRD1Lq8ZF9jVWOOJuN3tWPS5M2lLZzuayjw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "weSY1+xC2IWsc4ncUHtQhWp3H5eek/LVHZEDlWdgryY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css",
       "SourceId": "KanbanChatApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "KanbanChatApp#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -77,13 +77,13 @@
       "Integrity": "NerePQeXCeSZ6ITSWm+O2+8U4XqZtqYVNRISSaqYUfw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
       "SourceId": "KanbanChatApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "KanbanChatApp#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -98,13 +98,13 @@
       "Integrity": "NerePQeXCeSZ6ITSWm+O2+8U4XqZtqYVNRISSaqYUfw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\app.css",
       "SourceId": "KanbanChatApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -115,17 +115,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9tsjre4pz5",
-      "Integrity": "Y3QRrYDjsQ+Bj4noKNSCcSRxgRtgAn0QL1o5m5BNepk=",
+      "Fingerprint": "ybh3jt1ei5",
+      "Integrity": "gm7laClLKKiopgS5nvLDl+ToFdFYrSgx3OHau+PPsmQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\css\\chat.css",
       "SourceId": "KanbanChatApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "css/chat#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -143,10 +143,52 @@
       "OriginalItemSpec": "wwwroot\\css\\chat.css"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\kaban-demo.jpeg",
       "SourceId": "KanbanChatApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
+      "BasePath": "_content/KanbanChatApp",
+      "RelativePath": "images/kaban-demo#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1sbt9g8abi",
+      "Integrity": "4cmPM4SB+c4GK8NTzDYQvlxcfrYJFTa58o1mdmHdRyU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kaban-demo.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\teamsync-preview.jpg",
+      "SourceId": "KanbanChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
+      "BasePath": "_content/KanbanChatApp",
+      "RelativePath": "images/teamsync-preview#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6i8ir8hnhp",
+      "Integrity": "chk9JvIg5fTwW+9QBgfo+9WZoRErKj+q0XoTyfjpd74=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\teamsync-preview.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "SourceId": "KanbanChatApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "js/chat#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -157,17 +199,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "l0scu25spu",
-      "Integrity": "K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=",
+      "Fingerprint": "abtnisulwb",
+      "Integrity": "2qncT6tu5FuypDjb0hE1xbuI+BBgnNpcxMMASBCSFLk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
       "SourceId": "KanbanChatApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "js/signalr/signalr#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -185,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\js\\signalr\\signalr.js"
     },
     {
-      "Identity": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "Identity": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
       "SourceId": "KanbanChatApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\visual programing\\KanbanChatApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\",
       "BasePath": "_content/KanbanChatApp",
       "RelativePath": "js/signalr/signalr.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -209,7 +251,7 @@
   "Endpoints": [
     {
       "Route": "_content/MudBlazor/MudBlazor.min.css",
-      "AssetFile": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -246,7 +288,7 @@
     },
     {
       "Route": "_content/MudBlazor/MudBlazor.min.jrqzp895hu.js",
-      "AssetFile": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -291,7 +333,7 @@
     },
     {
       "Route": "_content/MudBlazor/MudBlazor.min.js",
-      "AssetFile": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -328,7 +370,7 @@
     },
     {
       "Route": "_content/MudBlazor/MudBlazor.min.qmvjbof2tn.css",
-      "AssetFile": "C:\\Users\\hali8\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\LENOVO\\.nuget\\packages\\mudblazor\\8.6.0\\staticwebassets\\MudBlazor.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -372,53 +414,8 @@
       ]
     },
     {
-      "Route": "app.9tsjre4pz5.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2154"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Y3QRrYDjsQ+Bj4noKNSCcSRxgRtgAn0QL1o5m5BNepk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9tsjre4pz5"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Y3QRrYDjsQ+Bj4noKNSCcSRxgRtgAn0QL1o5m5BNepk="
-        }
-      ]
-    },
-    {
       "Route": "app.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -427,7 +424,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2154"
+          "Value": "3072"
         },
         {
           "Name": "Content-Type",
@@ -435,11 +432,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y3QRrYDjsQ+Bj4noKNSCcSRxgRtgAn0QL1o5m5BNepk=\""
+          "Value": "\"gm7laClLKKiopgS5nvLDl+ToFdFYrSgx3OHau+PPsmQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 15:29:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -449,13 +446,58 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y3QRrYDjsQ+Bj4noKNSCcSRxgRtgAn0QL1o5m5BNepk="
+          "Value": "sha256-gm7laClLKKiopgS5nvLDl+ToFdFYrSgx3OHau+PPsmQ="
+        }
+      ]
+    },
+    {
+      "Route": "app.ybh3jt1ei5.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gm7laClLKKiopgS5nvLDl+ToFdFYrSgx3OHau+PPsmQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 15:29:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ybh3jt1ei5"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gm7laClLKKiopgS5nvLDl+ToFdFYrSgx3OHau+PPsmQ="
         }
       ]
     },
     {
       "Route": "css/chat.1h4o7idehe.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\css\\chat.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -476,7 +518,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -500,7 +542,7 @@
     },
     {
       "Route": "css/chat.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\css\\chat.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\css\\chat.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -521,7 +563,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -536,8 +578,8 @@
       ]
     },
     {
-      "Route": "js/chat.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Route": "images/kaban-demo.1sbt9g8abi.jpeg",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\kaban-demo.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -546,56 +588,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2187"
+          "Value": "110782"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=\""
+          "Value": "\"4cmPM4SB+c4GK8NTzDYQvlxcfrYJFTa58o1mdmHdRyU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY="
-        }
-      ]
-    },
-    {
-      "Route": "js/chat.l0scu25spu.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\chat.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2187"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Mon, 26 May 2025 20:06:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -605,7 +610,171 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "l0scu25spu"
+          "Value": "1sbt9g8abi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/kaban-demo.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cmPM4SB+c4GK8NTzDYQvlxcfrYJFTa58o1mdmHdRyU="
+        }
+      ]
+    },
+    {
+      "Route": "images/kaban-demo.jpeg",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\kaban-demo.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cmPM4SB+c4GK8NTzDYQvlxcfrYJFTa58o1mdmHdRyU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:06:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cmPM4SB+c4GK8NTzDYQvlxcfrYJFTa58o1mdmHdRyU="
+        }
+      ]
+    },
+    {
+      "Route": "images/teamsync-preview.6i8ir8hnhp.jpg",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\teamsync-preview.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"chk9JvIg5fTwW+9QBgfo+9WZoRErKj+q0XoTyfjpd74=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 23:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6i8ir8hnhp"
+        },
+        {
+          "Name": "label",
+          "Value": "images/teamsync-preview.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-chk9JvIg5fTwW+9QBgfo+9WZoRErKj+q0XoTyfjpd74="
+        }
+      ]
+    },
+    {
+      "Route": "images/teamsync-preview.jpg",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\images\\teamsync-preview.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"chk9JvIg5fTwW+9QBgfo+9WZoRErKj+q0XoTyfjpd74=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 23:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-chk9JvIg5fTwW+9QBgfo+9WZoRErKj+q0XoTyfjpd74="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.abtnisulwb.js",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2qncT6tu5FuypDjb0hE1xbuI+BBgnNpcxMMASBCSFLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 14:27:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "abtnisulwb"
         },
         {
           "Name": "label",
@@ -613,13 +782,50 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-K3GlhnCigUOW9Css6RAtGqpVByx1uZGT6EMfhxnYHIY="
+          "Value": "sha256-2qncT6tu5FuypDjb0hE1xbuI+BBgnNpcxMMASBCSFLk="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.js",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2qncT6tu5FuypDjb0hE1xbuI+BBgnNpcxMMASBCSFLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 14:27:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2qncT6tu5FuypDjb0hE1xbuI+BBgnNpcxMMASBCSFLk="
         }
       ]
     },
     {
       "Route": "js/signalr/signalr.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -640,7 +846,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -656,7 +862,7 @@
     },
     {
       "Route": "js/signalr/signalr.min.4if2422s7n.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -677,7 +883,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -701,7 +907,7 @@
     },
     {
       "Route": "js/signalr/signalr.min.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -722,7 +928,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -738,7 +944,7 @@
     },
     {
       "Route": "js/signalr/signalr.ow5ttbm12p.js",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\wwwroot\\js\\signalr\\signalr.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -759,7 +965,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -783,7 +989,7 @@
     },
     {
       "Route": "KanbanChatApp.bundle.scp.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -804,7 +1010,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -820,7 +1026,7 @@
     },
     {
       "Route": "KanbanChatApp.styles.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -841,7 +1047,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -857,7 +1063,7 @@
     },
     {
       "Route": "KanbanChatApp.z6phc8p5ku.bundle.scp.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KanbanChatApp.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -878,7 +1084,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -902,7 +1108,7 @@
     },
     {
       "Route": "KanbanChatApp.z6phc8p5ku.styles.css",
-      "AssetFile": "D:\\visual programing\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css",
+      "AssetFile": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\KanbanChatApp.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -923,7 +1129,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 19:36:52 GMT"
+          "Value": "Sun, 25 May 2025 09:55:17 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -14,23 +14,65 @@
 
 <PageTitle>Resend email confirmation</PageTitle>
 
-<h1>Resend email confirmation</h1>
-<h2>Enter your email.</h2>
-<hr />
-<StatusMessage Message="@message" />
-<div class="row">
-    <div class="col-md-4">
-        <EditForm Model="Input" FormName="resend-email-confirmation" OnValidSubmit="OnValidSubmitAsync" method="post">
-            <DataAnnotationsValidator />
-            <ValidationSummary class="text-danger" role="alert" />
-            <div class="form-floating mb-3">
-                <InputText @bind-Value="Input.Email" class="form-control" aria-required="true" placeholder="name@example.com" />
-                <label for="email" class="form-label">Email</label>
-                <ValidationMessage For="() => Input.Email" class="text-danger" />
-            </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Resend</button>
-        </EditForm>
-    </div>
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .resend-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 3rem;
+        max-width: 600px;
+        margin: 5rem auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .resend-title {
+        color: #5a30d0;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .form-floating input {
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .btn-resend {
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        font-weight: bold;
+        padding: 0.75rem;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
+        transition: 0.3s;
+    }
+
+    .btn-resend:hover {
+        box-shadow: 0 15px 25px rgba(106, 17, 203, 0.4);
+        transform: translateY(-2px);
+    }
+</style>
+
+<div class="resend-container">
+    <div class="resend-title">Resend Email Confirmation</div>
+    <h5 class="text-muted">Enter your email to receive a new confirmation link</h5>
+    <hr />
+    <StatusMessage Message="@message" />
+    <EditForm Model="Input" FormName="resend-email-confirmation" OnValidSubmit="OnValidSubmitAsync" method="post">
+        <DataAnnotationsValidator />
+        <ValidationSummary class="text-danger" role="alert" />
+        <div class="form-floating mb-3">
+            <InputText @bind-Value="Input.Email" class="form-control" aria-required="true" placeholder="name@example.com" />
+            <label for="email" class="form-label">Email</label>
+            <ValidationMessage For="() => Input.Email" class="text-danger" />
+        </div>
+        <button type="submit" class="w-100 btn btn-resend">Resend</button>
+    </EditForm>
 </div>
 
 @code {

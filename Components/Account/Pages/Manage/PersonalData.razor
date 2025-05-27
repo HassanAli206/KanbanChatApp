@@ -4,22 +4,46 @@
 
 <PageTitle>Personal Data</PageTitle>
 
-<StatusMessage />
-<h3>Personal Data</h3>
+<style>
+    body {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<div class="row">
-    <div class="col-md-6">
-        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
-        <p>
-            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
-        </p>
-        <form action="Account/Manage/DownloadPersonalData" method="post">
-            <AntiforgeryToken />
-            <button class="btn btn-primary" type="submit">Download</button>
-        </form>
-        <p>
-            <a href="Account/Manage/DeletePersonalData" class="btn btn-danger">Delete</a>
-        </p>
+    .personal-data-card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+    }
+
+    .personal-data-card h3 {
+        color: #333;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="personal-data-card">
+                <h3 class="mb-4">Personal Data</h3>
+                <StatusMessage />
+
+                <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+                <p>
+                    <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+                </p>
+                <form action="Account/Manage/DownloadPersonalData" method="post">
+                    <AntiforgeryToken />
+                    <button class="btn btn-primary" type="submit">Download</button>
+                </form>
+                <p class="mt-3">
+                    <a href="Account/Manage/DeletePersonalData" class="btn btn-danger">Delete</a>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 
