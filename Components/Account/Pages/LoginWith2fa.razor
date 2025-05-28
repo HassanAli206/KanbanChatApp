@@ -1,5 +1,9 @@
 ﻿@page "/Account/LoginWith2fa"
 
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
+@inject ILogger<LoginWith2fa> Logger
+
 <PageTitle>Two-factor authentication</PageTitle>
 
 <style>
@@ -35,24 +39,30 @@
 <div class="twofa-container">
     <div class="twofa-title">Two-factor authentication</div>
     <StatusMessage Message="@message" />
-    <p class="twofa-subtitle">Your login is protected with an authenticator app. Enter your authenticator code below.</p>
 
-    <EditForm Model="Input" FormName="login-with-2fa" OnValidSubmit="OnValidSubmitAsync" method="post">
+    <p class="twofa-subtitle">
+        Your login is protected with an authenticator app. Enter your authenticator code below.
+    </p>
+
+    <EditForm Model="@Input" OnValidSubmit="OnValidSubmitAsync">
         <input type="hidden" name="ReturnUrl" value="@ReturnUrl" />
-        <input type="hidden" name="RememberMe" value="@RememberMe" />
+        <input type="hidden" name="RememberMe" value="@RememberMe.ToString()" />
         <DataAnnotationsValidator />
-        <ValidationSummary class="text-danger" role="alert" />
+        <ValidationSummary class="text-danger" />
+
         <div class="form-floating mb-3">
             <InputText @bind-Value="Input.TwoFactorCode" class="form-control" autocomplete="off" />
             <label for="two-factor-code" class="form-label">Authenticator code</label>
-            <ValidationMessage For="() => Input.TwoFactorCode" class="text-danger" />
+            <ValidationMessage For="@(() => Input.TwoFactorCode)" class="text-danger" />
         </div>
+
         <div class="checkbox mb-3">
             <label for="remember-machine" class="form-label">
                 <InputCheckbox @bind-Value="Input.RememberMachine" />
                 Remember this machine
             </label>
         </div>
+
         <div>
             <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
         </div>
@@ -63,3 +73,34 @@
         <a href="Account/LoginWithRecoveryCode?ReturnUrl=@ReturnUrl">Log in with a recovery code</a>.
     </p>
 </div>
+
+@code {
+    private string message;
+    private string ReturnUrl { get; set; }
+    private bool RememberMe { get; set; }
+
+    private TwoFactorInputModel Input { get; set; } = new();
+
+    private async Task OnValidSubmitAsync()
+    {
+        // Implement your 2FA login logic here
+        Logger.LogInformation("Two-factor code submitted: {Code}", Input.TwoFactorCode);
+        // Redirect or show errors based on actual result
+    }
+
+    public class TwoFactorInputModel
+    {
+        [Required(ErrorMessage = "Authenticator code is required.")]
+        [StringLength(7, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        public string TwoFactorCode { get; set; }
+
+        public bool RememberMachine { get; set; }
+    }
+
+    protected override void OnInitialized()
+    {
+        // Example default values
+        ReturnUrl = Navigation.ToBaseRelativePath(Navigation.Uri);
+        RememberMe = true;
+    }
+}

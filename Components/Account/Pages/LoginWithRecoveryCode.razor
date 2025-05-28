@@ -1,5 +1,13 @@
 ﻿@page "/Account/LoginWithRecoveryCode"
 
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.Extensions.Logging
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject ILogger<LoginWithRecoveryCode> Logger
+@inject NavigationManager Navigation
+
 <PageTitle>Recovery code verification</PageTitle>
 
 <style>
@@ -40,7 +48,7 @@
         an authenticator app code at log in or disable 2FA and log in again.
     </p>
 
-    <EditForm Model="Input" FormName="login-with-recovery-code" OnValidSubmit="OnValidSubmitAsync" method="post">
+    <EditForm Model="Input" OnValidSubmit="OnValidSubmitAsync">
         <DataAnnotationsValidator />
         <ValidationSummary class="text-danger" role="alert" />
         <div class="form-floating mb-3">
@@ -54,7 +62,6 @@
 
 @code {
     private string? message;
-    private ApplicationUser user = default!;
 
     [SupplyParameterFromForm]
     private InputModel Input { get; set; } = new();
@@ -62,10 +69,12 @@
     [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }
 
+    private IdentityUser user = default!;
+
     protected override async Task OnInitializedAsync()
     {
-        user = await SignInManager.GetTwoFactorAuthenticationUserAsync() ??
-            throw new InvalidOperationException("Unable to load two-factor authentication user.");
+        user = await SignInManager.GetTwoFactorAuthenticationUserAsync()
+               ?? throw new InvalidOperationException("Unable to load two-factor authentication user.");
     }
 
     private async Task OnValidSubmitAsync()
@@ -77,16 +86,16 @@
         if (result.Succeeded)
         {
             Logger.LogInformation("User with ID '{UserId}' logged in with a recovery code.", userId);
-            RedirectManager.RedirectTo(ReturnUrl);
+            Navigation.NavigateTo(ReturnUrl ?? "/");
         }
         else if (result.IsLockedOut)
         {
             Logger.LogWarning("User account locked out.");
-            RedirectManager.RedirectTo("Account/Lockout");
+            Navigation.NavigateTo("/Account/Lockout");
         }
         else
         {
-            Logger.LogWarning("Invalid recovery code entered for user with ID '{UserId}' ", userId);
+            Logger.LogWarning("Invalid recovery code entered for user with ID '{UserId}'", userId);
             message = "Error: Invalid recovery code entered.";
         }
     }

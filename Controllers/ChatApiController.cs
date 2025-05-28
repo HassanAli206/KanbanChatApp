@@ -10,10 +10,7 @@ namespace KanbanChatApp.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public ChatApiController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        public ChatApiController(ApplicationDbContext context) => _context = context;
 
         [HttpGet("{projectId}")]
         public async Task<IActionResult> GetMessages(string projectId)
