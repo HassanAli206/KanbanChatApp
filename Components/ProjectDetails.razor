@@ -14,97 +14,157 @@
 <PageTitle>Project Details</PageTitle>
 
 <style>
-    body {
+    .project-details-bg {
+        position: relative;
         background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
         background-size: cover;
-        font-family: 'Segoe UI', sans-serif;
+        min-height: 100vh;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
-    .card, .table, .form-control, .form-select, .btn {
+        .project-details-bg::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.6); /* soft white overlay */
+            backdrop-filter: blur(6px);
+            z-index: 0;
+        }
+
+    .content-shell {
+        max-width: 1100px;
+        margin: auto;
+        padding: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    }
+
+    .glass-header {
+        background: linear-gradient(to right, #4f46e5, #9333ea);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    }
+
+    .form-control,
+    .form-select,
+    .btn {
         border-radius: 10px;
     }
 
-    .card {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    .btn-gradient {
+        background: linear-gradient(to right, #4f46e5, #9333ea);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        transition: box-shadow 0.3s ease;
     }
+
+        .btn-gradient:hover {
+            box-shadow: 0 8px 20px rgba(147, 51, 234, 0.3);
+        }
 
     .table {
         background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
 </style>
 
-<div class="container py-5">
-    <div class="row">
-        <div class="col-12">
-            <h3 class="mb-4 text-white">Project Details</h3>
+<div class="project-details-bg">
+    <div class="content-shell">
+        <h3 class="mb-4 text-dark fw-bold">📁 Project Details</h3>
 
-            @if (project == null)
+        @if (project == null)
+        {
+            <div class="alert alert-info">
+                <em>Loading...</em>
+            </div>
+        }
+        else
+        {
+            <!-- Project Overview -->
+            <div class="glass-card">
+                <div class="glass-header">
+                    <h5 class="mb-0">@project.Name</h5>
+                </div>
+                <p>@project.Description</p>
+            </div>
+
+            <!-- Add Task Form (Admins Only) -->
+            @if (isAdmin)
             {
-                <div class="alert alert-info" role="alert">
-                    <em>Loading...</em>
+                <div class="glass-card">
+                    <div class="glass-header">
+                        <h5 class="mb-0">📝 Add Task</h5>
+                    </div>
+                    <EditForm Model="newTask" OnValidSubmit="AddTask" FormName="AddTaskForm">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary class="text-danger" />
+
+                        <div class="mb-3">
+                            <label class="form-label">Title</label>
+                            <InputText @bind-Value="newTask.Title" class="form-control" placeholder="Enter task title" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <InputSelect @bind-Value="newTask.Status" class="form-select">
+                                <option value="To-Do">To-Do</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Done">Done</option>
+                            </InputSelect>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Assign to</label>
+                            <select class="form-select" @bind="newTask.AssignedUserId">
+                                <option value="">-- Unassigned --</option>
+                                @foreach (var user in users)
+                                {
+                                    <option value="@user.Id">@user.UserName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-gradient">Add Task</button>
+                    </EditForm>
                 </div>
             }
-            else
-            {
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h4 class="card-title">@project.Name</h4>
-                        <p class="card-text">@project.Description</p>
-                    </div>
+
+            <!-- Task List -->
+            <div class="glass-card">
+                <div class="glass-header">
+                    <h5 class="mb-0">📋 Tasks</h5>
                 </div>
-
-                @if (isAdmin)
-                {
-                    <h5 class="mb-3 text-white">Add Task</h5>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <EditForm Model="newTask" OnValidSubmit="AddTask" FormName="AddTaskForm">
-                                <DataAnnotationsValidator />
-                                <ValidationSummary class="text-danger" />
-
-                                <div class="mb-3">
-                                    <label for="taskTitle" class="form-label">Title</label>
-                                    <InputText id="taskTitle" @bind-Value="newTask.Title" class="form-control" placeholder="Enter task title" />
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="taskStatus" class="form-label">Status</label>
-                                    <InputSelect id="taskStatus" @bind-Value="newTask.Status" class="form-select">
-                                        <option value="To-Do">To-Do</option>
-                                        <option value="In Progress">In Progress</option>
-                                        <option value="Done">Done</option>
-                                    </InputSelect>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="assignedUser" class="form-label">Assign to</label>
-                                    <select id="assignedUser" class="form-select" @bind="newTask.AssignedUserId">
-                                        <option value="">-- Unassigned --</option>
-                                        @foreach (var user in users)
-                                        {
-                                            <option value="@user.Id">@user.UserName</option>
-                                        }
-                                    </select>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Add Task</button>
-                            </EditForm>
-                        </div>
-                    </div>
-                }
-
-                <h5 class="mb-3 text-white">Tasks</h5>
 
                 @if (project.Tasks == null || !project.Tasks.Any())
                 {
-                    <div class="alert alert-warning" role="alert">
-                        No tasks found.
-                    </div>
+                    <div class="alert alert-warning mt-3">No tasks found.</div>
                 }
                 else
                 {
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
+                        <table class="table table-striped table-bordered mt-3">
                             <thead class="table-dark">
                                 <tr>
                                     <th>Title</th>
@@ -157,8 +217,8 @@
                         </table>
                     </div>
                 }
-            }
-        </div>
+            </div>
+        }
     </div>
 </div>
 
@@ -197,10 +257,10 @@
             .FirstOrDefault(p => p.Id == ProjectId);
 
         newTask = new TaskItem
-        {
-            ProjectId = ProjectId,
-            Status = "To-Do"
-        };
+            {
+                ProjectId = ProjectId,
+                Status = "To-Do"
+            };
     }
 
     private async Task AddTask()

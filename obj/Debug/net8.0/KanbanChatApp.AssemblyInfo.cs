@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KanbanChatApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33ced4455894232228435c9e594ddd56508c312f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88ea3b9f7392b15dc25279c84ba7d674160c9a97")]
 [assembly: System.Reflection.AssemblyProductAttribute("KanbanChatApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KanbanChatApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,65 +6,92 @@
 <PageTitle>Project Chat Room</PageTitle>
 
 <style>
-    body {
+    .chat-bg {
         background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
         background-size: cover;
+        min-height: 100vh;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         font-family: 'Segoe UI', sans-serif;
+        position: relative;
     }
 
-    .chat-container {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-radius: 15px;
-        padding: 2rem;
+        .chat-bg::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 0;
+        }
+
+    .content-shell {
         max-width: 800px;
-        margin: 6rem auto;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
     .chat-box {
-        height: 300px;
+        height: 350px;
         overflow-y: auto;
-        background-color: #f8f9fa;
+        background-color: #f0f2f5;
         border: 1px solid #ccc;
-        padding: 1rem;
         border-radius: 10px;
-        margin-bottom: 1rem;
-    }
-
-    .chat-input {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .chat-input input[type="text"] {
         padding: 0.75rem;
-        border-radius: 8px;
+        border-radius: 10px;
         border: 1px solid #ccc;
         font-size: 1rem;
+        margin-bottom: 0.75rem;
     }
 
-    .chat-input button {
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        border-radius: 8px;
+    .btn-send {
+        background: linear-gradient(to right, #4f46e5, #9333ea);
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border: none;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(147, 51, 234, 0.25);
+        transition: transform 0.2s ease;
     }
+
+        .btn-send:hover {
+            transform: translateY(-2px);
+        }
 </style>
 
-<div class="chat-container mt-5">
-    <h3 class="mb-4 text-center">Project Chat Room</h3>
+<div class="chat-bg">
+    <div class="content-shell">
+        <div class="glass-card">
+            <h3 class="mb-4 text-center">💬 Project Chat Room</h3>
 
-    <div class="chat-box" id="messagesList">
-        <!-- Messages will appear here -->
-    </div>
+            <div class="chat-box" id="messagesList">
+                <!-- Messages appear here -->
+            </div>
 
-    <div class="chat-input">
-        <input type="text" id="userInput" class="form-control" placeholder="Your name" />
-        <input type="text" id="messageInput" class="form-control" placeholder="Type a message..." />
-        <button id="sendButton" class="btn btn-primary">Send</button>
+            <div class="chat-input">
+                <input type="text" id="userInput" class="form-control" placeholder="Your name" />
+                <input type="text" id="messageInput" class="form-control" placeholder="Type a message..." />
+                <button id="sendButton" class="btn btn-send">Send</button>
+            </div>
+        </div>
     </div>
 </div>
 
-<link href="/css/chat.css" rel="stylesheet" />
 <script src="/js/signalr/signalr.min.js"></script>
 <script src="/js/chat.js"></script>
