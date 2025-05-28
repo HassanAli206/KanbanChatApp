@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\KanbanChatApp\\KanbanChatApp.csproj": {}
+    "D:\\visual programing\\KanbanChatApp\\KanbanChatApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\KanbanChatApp\\KanbanChatApp.csproj": {
+    "D:\\visual programing\\KanbanChatApp\\KanbanChatApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\KanbanChatApp\\KanbanChatApp.csproj",
+        "projectUniqueName": "D:\\visual programing\\KanbanChatApp\\KanbanChatApp.csproj",
         "projectName": "KanbanChatApp",
-        "projectPath": "C:\\Users\\LENOVO\\KanbanChatApp\\KanbanChatApp.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\KanbanChatApp\\obj\\",
+        "projectPath": "D:\\visual programing\\KanbanChatApp\\KanbanChatApp.csproj",
+        "packagesPath": "C:\\Users\\hali8\\.nuget\\packages\\",
+        "outputPath": "D:\\visual programing\\KanbanChatApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hali8\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
@@ -95,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

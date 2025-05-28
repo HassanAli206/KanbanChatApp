@@ -4,21 +4,23 @@
 
 <AuthorizeView>
     <Authorized>
-        <div class="main-wrapper dark-mode">
-            <div class="glass-container">
-                <h1 class="glow-title">👋 Welcome, @context.User.Identity?.Name</h1>
+        <div class="home-background">
+            <div class="home-card">
+                <h1 class="title">👋 Welcome, <span class="highlight">@context.User.Identity?.Name</span></h1>
                 <p class="subtitle">Your team's synergy starts here.</p>
 
-                <div class="card-grid">
-                    <div class="card-item">📂 Dashboard Overview</div>
-                    <div class="card-item">💬 Team Chat</div>
+                <div class="feature-grid">
+                    <a class="feature-card" href="/dashboard">📂 Dashboard Overview</a>
+                    <a class="feature-card" href="/chat">💬 Team Chat</a>
                     @if (context.User.IsInRole("Admin"))
                     {
-                        <div class="card-item">🛠️ Admin Panel</div>
+                        <a class="feature-card" href="/roles">🛠️ Admin Panel</a>
                     }
                 </div>
 
-                <a class="btn neon-red" href="/Account/Logout">🚪 Logout</a>
+                <div class="action-buttons">
+                    <a class="btn logout-btn" href="/Account/Logout">🚪 Logout</a>
+                </div>
             </div>
         </div>
     </Authorized>
@@ -39,7 +41,7 @@
             <div class="feature-grid">
                 <div class="feature-card">📁 Create and manage projects</div>
                 <div class="feature-card">✅ Assign and track tasks</div>
-                <div class="feature-card">💬 Chat with team mins instantly</div>
+                <div class="feature-card">💬 Chat with teammates instantly</div>
                 <div class="feature-card">🔐 Secure, role-based access</div>
             </div>
 
@@ -50,6 +52,7 @@
         </div>
     </NotAuthorized>
 </AuthorizeView>
+
 
 <style>
     @@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
@@ -204,6 +207,63 @@
         transform: scale(1.03);
     }
 
+    .home-background {
+        background: url('/images/teamsync-preview.jpg') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .home-card {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 2.5rem 3rem;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logout-btn {
+        background-color: #ef4444;
+        color: white;
+        padding: 0.8rem 1.6rem;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .logout-btn:hover {
+            background-color: #dc2626;
+        }
+
+    .feature-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 2rem 0;
+    }
+
+    .feature-card {
+        background: linear-gradient(135deg, #e0e7ff, #f0f4ff);
+        border-radius: 12px;
+        padding: 1rem 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #1e293b;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+
+
     @@media (max-width: 768px) {
         .lite-container {
             flex-direction: column;
@@ -214,4 +274,6 @@
             margin-top: 2rem;
         }
     }
+
+
 </style>

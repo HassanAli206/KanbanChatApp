@@ -4,6 +4,7 @@
 @using Microsoft.AspNetCore.Authentication
 @using Microsoft.AspNetCore.Identity
 @using KanbanChatApp.Data
+@layout KanbanChatApp.Components.Account.Pages.NoLayout
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject ILogger<Login> Logger
@@ -79,10 +80,8 @@
     }
 </style>
 
-<div class="nav-sidebar">
-    <a href="/Account/Login">Login</a>
-    <a href="/Account/Register">Register</a>
-</div>
+<a href="/" class="btn btn-outline-secondary mb-3 ms-3">← Back to Home</a>
+
 
 <div class="login-container">
     <StatusMessage Message="@errorMessage" />

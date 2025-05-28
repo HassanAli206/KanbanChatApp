@@ -356,3 +356,5 @@ C:\Users\LENOVO\KanbanChatApp\obj\Debug\net8.0\KanbanChatApp.genruntimeconfig.ca
 C:\Users\LENOVO\KanbanChatApp\obj\Debug\net8.0\ref\KanbanChatApp.dll
 C:\Users\LENOVO\KanbanChatApp\obj\Debug\net8.0\KanbanChatApp.RazorAssemblyInfo.cache
 C:\Users\LENOVO\KanbanChatApp\obj\Debug\net8.0\KanbanChatApp.RazorAssemblyInfo.cs
+D:\visual programing\KanbanChatApp\obj\Debug\net8.0\KanbanChatApp.RazorAssemblyInfo.cache
+D:\visual programing\KanbanChatApp\obj\Debug\net8.0\KanbanChatApp.RazorAssemblyInfo.cs

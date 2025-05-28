@@ -6,6 +6,7 @@
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.WebUtilities
 @using KanbanChatApp.Data
+@layout KanbanChatApp.Components.Account.Pages.NoLayout
 
 @inject UserManager<ApplicationUser> UserManager
 @inject IUserStore<ApplicationUser> UserStore
@@ -92,10 +93,7 @@
     }
 </style>
 
-<div class="nav-sidebar">
-    <a href="/Account/Login">Login</a>
-    <a href="/Account/Register">Register</a>
-</div>
+<a href="/" class="btn btn-outline-secondary mb-3 ms-3">← Back to Home</a>
 
 <div class="register-container">
     <StatusMessage Message="@Message" />
