@@ -10,19 +10,23 @@ namespace KanbanChatApp.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public ChatApiController(ApplicationDbContext context) => _context = context;
+        public ChatApiController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet("{projectId}")]
-        public async Task<IActionResult> GetMessages(string projectId)
+        public async Task<IActionResult> GetMessages(int projectId)
         {
             var messages = await _context.ChatMessages
                 .Where(m => m.ProjectId == projectId)
+                .Include(m => m.User) // 🔥 include user info
                 .OrderBy(m => m.Timestamp)
                 .Select(m => new
                 {
-                    m.User,
-                    m.Message,
-                    Timestamp = m.Timestamp.ToString("HH:mm:ss dd/MM/yyyy")
+                    userName = m.User.UserName,
+                    message = m.Message,
+                    timestamp = m.Timestamp.ToString("HH:mm:ss dd/MM/yyyy")
                 })
                 .ToListAsync();
 

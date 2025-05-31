@@ -1,4 +1,6 @@
 ﻿@page "/jschat/{projectId:int}"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
 @code {
     [Parameter] public int projectId { get; set; }
 }
@@ -80,12 +82,9 @@
         <div class="glass-card">
             <h3 class="mb-4 text-center">💬 Project Chat Room</h3>
 
-            <div class="chat-box" id="messagesList">
-                <!-- Messages appear here -->
-            </div>
+            <div class="chat-box" id="messagesList"></div>
 
             <div class="chat-input">
-                <input type="text" id="userInput" class="form-control" placeholder="Your name" />
                 <input type="text" id="messageInput" class="form-control" placeholder="Type a message..." />
                 <button id="sendButton" class="btn btn-send">Send</button>
             </div>
@@ -94,4 +93,53 @@
 </div>
 
 <script src="/js/signalr/signalr.min.js"></script>
-<script src="/js/chat.js"></script>
+<script>
+    const projectId = window.location.pathname.split("/").pop();
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl(`/chathub?projectId=${projectId}`)
+        .build();
+
+    document.getElementById("sendButton").disabled = true;
+
+    connection.on("ReceiveMessage", function (user, message) {
+        appendMessage(user, message);
+    });
+
+    connection.start().then(function () {
+        document.getElementById("sendButton").disabled = false;
+        console.log("✅ SignalR connected");
+        fetchHistory();
+    }).catch(function (err) {
+        return console.error("SignalR error:", err.toString());
+    });
+
+    function fetchHistory() {
+        fetch(`/api/chatapi/${projectId}`)
+            .then(response => response.json())
+            .then(messages => {
+                messages.forEach(msg => appendMessage(msg.userName, msg.message));
+            })
+            .catch(error => console.error("❌ Chat history fetch failed:", error));
+    }
+
+    function appendMessage(user, message) {
+        const div = document.createElement("div");
+        div.className = "mb-2";
+        div.innerHTML = `<strong>${user}</strong>: ${message}`;
+        document.getElementById("messagesList").appendChild(div);
+        div.scrollIntoView({ behavior: "smooth" });
+    }
+
+    document.getElementById("sendButton").addEventListener("click", function (event) {
+        const message = document.getElementById("messageInput").value;
+        if (!message) return;
+
+        connection.invoke("SendMessage", projectId, message)
+            .catch(function (err) {
+                console.error("❌ Send failed:", err.toString());
+            });
+
+        document.getElementById("messageInput").value = "";
+        event.preventDefault();
+    });
+</script>

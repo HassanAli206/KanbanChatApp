@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using KanbanChatApp.Data;
-using System;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace KanbanChatApp.Hubs
 {
@@ -14,35 +13,36 @@ namespace KanbanChatApp.Hubs
             _context = context;
         }
 
-        public async Task SendMessage(string projectId, string user, string message)
+        public async Task SendMessage(string projectId, string message)
         {
-            // Save message to database
+            if (!int.TryParse(projectId, out int projectIntId)) return;
+
+            var userName = Context.User?.Identity?.Name;
+            if (string.IsNullOrEmpty(userName)) return;
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+            if (user == null) return;
+
             var chatMessage = new ChatMessage
             {
-                ProjectId = projectId,
-                User = user,
+                ProjectId = projectIntId,
+                UserId = user.Id,
                 Message = message,
-                Timestamp = DateTime.Now
+                Timestamp = DateTime.UtcNow
             };
 
             _context.ChatMessages.Add(chatMessage);
             await _context.SaveChangesAsync();
 
-            // Send message to the group (clients with same projectId)
-            await Clients.Group(projectId).SendAsync("ReceiveMessage", user, message);
+            await Clients.Group(projectId).SendAsync("ReceiveMessage", user.UserName, message);
         }
 
         public override async Task OnConnectedAsync()
         {
-            var httpContext = Context.GetHttpContext();
-            var projectId = httpContext?.Request.Query["projectId"];
-
-            Console.WriteLine($"✅ CONNECT: {Context.ConnectionId}, project: {projectId}");
-
+            var projectId = Context.GetHttpContext()?.Request.Query["projectId"];
             if (!string.IsNullOrEmpty(projectId))
             {
-                await Groups.AddToGroupAsync(Context.ConnectionId, projectId!);
-                Console.WriteLine($"🟢 Added to group: {projectId}");
+                await Groups.AddToGroupAsync(Context.ConnectionId, projectId);
             }
 
             await base.OnConnectedAsync();
@@ -50,15 +50,10 @@ namespace KanbanChatApp.Hubs
 
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
-            var httpContext = Context.GetHttpContext();
-            var projectId = httpContext?.Request.Query["projectId"];
-
-            Console.WriteLine($"⚠️ DISCONNECT: {Context.ConnectionId}, project: {projectId}");
-
+            var projectId = Context.GetHttpContext()?.Request.Query["projectId"];
             if (!string.IsNullOrEmpty(projectId))
             {
-                await Groups.RemoveFromGroupAsync(Context.ConnectionId, projectId!);
-                Console.WriteLine($"🔴 Removed from group: {projectId}");
+                await Groups.RemoveFromGroupAsync(Context.ConnectionId, projectId);
             }
 
             await base.OnDisconnectedAsync(exception);

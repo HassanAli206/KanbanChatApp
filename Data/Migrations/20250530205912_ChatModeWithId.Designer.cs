@@ -4,6 +4,7 @@ using KanbanChatApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KanbanChatApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250530205912_ChatModeWithId")]
+    partial class ChatModeWithId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,40 +119,6 @@ namespace KanbanChatApp.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("ChatMessages");
-                });
-
-            modelBuilder.Entity("KanbanChatApp.Data.Project", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CreatedById")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProjectCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApplicationUserId");
-
-                    b.HasIndex("CreatedById");
-
-                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("KanbanChatApp.Data.TaskItem", b =>
@@ -319,6 +288,41 @@ namespace KanbanChatApp.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Project", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("CreatedById");
+
+                    b.ToTable("Projects");
+                });
+
             modelBuilder.Entity("ProjectMember", b =>
                 {
                     b.Property<int>("ProjectId")
@@ -348,7 +352,7 @@ namespace KanbanChatApp.Migrations
 
             modelBuilder.Entity("KanbanChatApp.Data.ChatMessage", b =>
                 {
-                    b.HasOne("KanbanChatApp.Data.Project", "Project")
+                    b.HasOne("Project", "Project")
                         .WithMany()
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -365,26 +369,13 @@ namespace KanbanChatApp.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("KanbanChatApp.Data.Project", b =>
-                {
-                    b.HasOne("KanbanChatApp.Data.ApplicationUser", null)
-                        .WithMany("CreatedProjects")
-                        .HasForeignKey("ApplicationUserId");
-
-                    b.HasOne("KanbanChatApp.Data.ApplicationUser", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedById");
-
-                    b.Navigation("CreatedBy");
-                });
-
             modelBuilder.Entity("KanbanChatApp.Data.TaskItem", b =>
                 {
                     b.HasOne("KanbanChatApp.Data.ApplicationUser", "AssignedUser")
                         .WithMany()
                         .HasForeignKey("AssignedUserId");
 
-                    b.HasOne("KanbanChatApp.Data.Project", "Project")
+                    b.HasOne("Project", "Project")
                         .WithMany("Tasks")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -446,13 +437,28 @@ namespace KanbanChatApp.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Project", b =>
+                {
+                    b.HasOne("KanbanChatApp.Data.ApplicationUser", null)
+                        .WithMany("CreatedProjects")
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("KanbanChatApp.Data.ApplicationUser", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CreatedBy");
+                });
+
             modelBuilder.Entity("ProjectMember", b =>
                 {
                     b.HasOne("KanbanChatApp.Data.ApplicationUser", null)
                         .WithMany("ProjectMemberships")
                         .HasForeignKey("ApplicationUserId");
 
-                    b.HasOne("KanbanChatApp.Data.Project", "Project")
+                    b.HasOne("Project", "Project")
                         .WithMany("Members")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -478,7 +484,7 @@ namespace KanbanChatApp.Migrations
                     b.Navigation("ProjectMemberships");
                 });
 
-            modelBuilder.Entity("KanbanChatApp.Data.Project", b =>
+            modelBuilder.Entity("Project", b =>
                 {
                     b.Navigation("Members");
 

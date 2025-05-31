@@ -267,7 +267,7 @@
     {
         if (Db != null && newTask != null)
         {
-            await Db.TaskItems.AddAsync(newTask);
+            await Db.Tasks.AddAsync(newTask); // Change TaskItems to Tasks
             await Db.SaveChangesAsync();
             LoadProject();
             StateHasChanged();
@@ -278,7 +278,7 @@
     {
         if (Db != null && task != null)
         {
-            Db.TaskItems.Update(task);
+            Db.Tasks.Update(task); // Change TaskItems to Tasks
             await Db.SaveChangesAsync();
             LoadProject();
             StateHasChanged();

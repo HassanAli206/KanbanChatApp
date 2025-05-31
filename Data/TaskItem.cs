@@ -1,21 +1,27 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KanbanChatApp.Data
 {
     public class TaskItem
     {
         public int Id { get; set; }
-        public string Title { get; set; } = string.Empty; 
+
+        [Required]
+        public string Title { get; set; } = string.Empty;
+
         public string? Description { get; set; }
-        public string Status { get; set; } = string.Empty; 
+
+        [Required]
+        public string Status { get; set; } = "To-Do";
 
         public int ProjectId { get; set; }
-        public Project Project { get; set; } = null!; 
+
+        public Project Project { get; set; } = null!;
 
         public string? AssignedUserId { get; set; }
 
         [ForeignKey("AssignedUserId")]
         public ApplicationUser? AssignedUser { get; set; }
     }
-
 }

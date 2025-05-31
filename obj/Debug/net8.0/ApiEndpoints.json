@@ -96,7 +96,7 @@
     "Parameters": [
       {
         "Name": "projectId",
-        "Type": "System.String",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

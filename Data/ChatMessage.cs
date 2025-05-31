@@ -3,9 +3,15 @@
     public class ChatMessage
     {
         public int Id { get; set; }
-        public string ProjectId { get; set; } = string.Empty; // Default value added
-        public string User { get; set; } = string.Empty; // Default value added
-        public string Message { get; set; }
-        public DateTime Timestamp { get; set; } = DateTime.Now;
+
+        public int ProjectId { get; set; }
+        public Project Project { get; set; } = null!;
+
+        public string UserId { get; set; } = string.Empty;
+        public ApplicationUser User { get; set; } = null!;
+
+        public string Message { get; set; } = string.Empty;
+
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
     }
 }
